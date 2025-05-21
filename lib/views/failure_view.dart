@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-class failure extends StatelessWidget {
-  const failure({
+class Failure extends StatelessWidget {
+  const Failure({
     super.key,
   });
 
