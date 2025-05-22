@@ -21,7 +21,15 @@ class Initial extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center, // Centra verticalmente
 
           children: [
-            const Text('Pantalla Inicial'), // Texto principal
+            const Text('WELCOME'),
+                        Image.network(
+              'https://i.imgur.com/OGpBRlP.jpeg', // Cambia esta URL por la de tu imagen
+              height: 200, // Puedes ajustar el tamaño de la imagen
+              width: 200,
+              fit: BoxFit.cover, // Ajusta cómo se adapta la imagen dentro del contenedor
+            ),
+            const SizedBox(height: 20), // Espacio entre la imagen y el texto
+
 
             const SizedBox(height: 20), // Espaciado vertical
 
