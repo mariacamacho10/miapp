@@ -1,13 +1,10 @@
-// Importa el paquete de Flutter Material (para widgets visuales)
-import 'package:flutter/material.dart';
-// Importa BLoC para poder usar BlocProvider y eventos
-import 'package:flutter_bloc/flutter_bloc.dart';
-// Importa tu Bloc personalizado
-import 'package:miapp/bloc/home_bloc.dart';
+import 'package:flutter/material.dart'; // Se importa el paquete de Flutter Material (para widget)
+import 'package:flutter_bloc/flutter_bloc.dart'; // Se importa BLoc para poder usar BlocProvider y eventos
+import 'package:miapp/bloc/home_bloc.dart'; // Se importa para bloc personalizado
 
-// Declaras un widget de tipo StatelessWidget (pantalla sin estado interno)
+// Se declara un widget de tipo StatelessWidget (pantalla sin estado)
 class Initial extends StatelessWidget {
-  const Initial({super.key}); // Constructor con clave opcional
+  const Initial({super.key}); // Constructor con clave
 
   @override
   Widget build(BuildContext context) {
@@ -15,34 +12,34 @@ class Initial extends StatelessWidget {
       // Encabezado de la pantalla
       appBar: AppBar(title: const Text('Inicio')),
 
-      // Cuerpo centrado en pantalla
+      // Cuerpo centrado de la pantalla
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Centra verticalmente
+          mainAxisAlignment: MainAxisAlignment.center, // Se centra verticalmente
 
           children: [
-            const Text('WELCOME'),
+            const Text('DISNEY PRINCESS'),
                         Image.network(
-              'https://i.imgur.com/OGpBRlP.jpeg', // Cambia esta URL por la de tu imagen
-              height: 200, // Puedes ajustar el tamaño de la imagen
+              'https://i.imgur.com/yieaVn8.png', // Imagen principal
+              height: 200, // Ajuste del tamaño de la imagen
               width: 200,
-              fit: BoxFit.cover, // Ajusta cómo se adapta la imagen dentro del contenedor
+              fit: BoxFit.cover, // Ajuste de cómo se adapta la imagen dentro del contenedor
             ),
-            const SizedBox(height: 20), // Espacio entre la imagen y el texto
+            const SizedBox(height: 20), // El espacio entre la imagen y el texto
 
 
             const SizedBox(height: 20), // Espaciado vertical
 
-            // Botón elevado (botón material)
+            // Botón elevado (botón de material)
             ElevatedButton(
               onPressed: () {
-                // Obtiene la instancia del HomeBloc desde el contexto actual
+                // Obtiene la instancia del HomeBloc desde el contexto
                 final homeBloc = BlocProvider.of<HomeBloc>(context);
 
-                // Envía un evento al bloc para indicar que se hizo clic en "Buscar"
+                // Se envia un evento al bloc indicando que se hizo clic en "Buscar"
                 homeBloc.add(HomeSearchPressed());
               },
-              child: const Text('Buscar Productos'), // Texto del botón
+              child: const Text('Entrar'), // Texto del botón
             ),
           ],
         ),
@@ -50,4 +47,3 @@ class Initial extends StatelessWidget {
     );
   }
 }
-

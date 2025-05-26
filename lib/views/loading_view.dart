@@ -8,7 +8,7 @@ class Loading extends StatelessWidget {
     return const Scaffold(
 
       body: Center(
-        // Centra todo en eje vertical y horizontal
+        // Se centra todo en eje vertical y horizontal
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
